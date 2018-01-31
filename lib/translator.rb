@@ -2,8 +2,7 @@ require 'pry'
 class Translator
   attr_reader :dictionary
 
-  def initialize(input)
-    @input      = input
+  def initialize
     @dictionary = {"a" => ".-",
                     "b" => "-...",
                     "c" => "-.-.",
@@ -43,19 +42,6 @@ class Translator
                     " " => " "}
   end
 
-  def eng_to_morse
-    # text = @input.split("")
-    # text.map do |character|
-    #   @dictionary[character]
-    # end
-    convert.join
-  end
 
-  def convert
-    text = @input.split("")
-    text.map do |character|
-      @dictionary[character]
-    end
-  end
 
 end
