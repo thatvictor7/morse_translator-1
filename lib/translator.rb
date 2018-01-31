@@ -47,7 +47,7 @@ class Translator
     #binding.pry
     text = @input.split("")
     text.map do |character|
-      @library[character]
+      @dictionary[character]
     end
   end
 end
