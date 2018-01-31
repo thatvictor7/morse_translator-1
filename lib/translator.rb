@@ -43,11 +43,19 @@ class Translator
                     " " => " "}
   end
 
+  def eng_to_morse
+    # text = @input.split("")
+    # text.map do |character|
+    #   @dictionary[character]
+    # end
+    convert.join
+  end
+
   def convert
-    #binding.pry
     text = @input.split("")
     text.map do |character|
       @dictionary[character]
     end
   end
+
 end
