@@ -1,7 +1,9 @@
+require 'pry'
 class Translator
   attr_reader :dictionary
 
-  def initialize
+  def initialize(input)
+    @input      = input
     @dictionary = {"a" => ".-",
                     "b" => "-...",
                     "c" => "-.-.",
@@ -39,5 +41,13 @@ class Translator
                     "9" => "----.",
                     "0" => "-----",
                     " " => " "}
+  end
+
+  def convert
+    #binding.pry
+    text = @input.split("")
+    text.map do |character|
+      @library[character]
+    end
   end
 end
